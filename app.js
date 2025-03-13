@@ -9,7 +9,11 @@ const cors = require("cors");
 
 const port = process.env.PORT || 5000;
 
-app.use(cors()); // Enable CORS
+app.use(cors({
+  origin: "http://localhost:3000", // Allow only frontend origin
+  methods: "GET,POST,PUT,DELETE",
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
