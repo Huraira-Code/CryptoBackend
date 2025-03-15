@@ -10,7 +10,7 @@ const cors = require("cors");
 const port = process.env.PORT || 5000;
 
 app.use(cors({
-  origin: "http://localhost:3000", // Allow only frontend origin
+  origin: "https://67d54a243c023bd312f70cd6--jade-vacherin-48d19f.netlify.app", // Allow only frontend origin
   methods: "GET,POST,PUT,DELETE",
   credentials: true
 }));
